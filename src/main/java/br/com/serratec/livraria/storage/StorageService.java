@@ -19,8 +19,8 @@ public class StorageService {
     private final Path diretorioBase;
 
     @Autowired
-    public StorageService(StorageProperties fileStorageProperties) throws Exception {
-        this.diretorioBase = Paths.get(fileStorageProperties.getDiretorioParaUpload())
+    public StorageService() throws Exception {
+        this.diretorioBase = Paths.get("/Users/vinicios/uploads")
                 .toAbsolutePath().normalize();
         try {
             Files.createDirectories(this.diretorioBase);
